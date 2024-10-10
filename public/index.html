@@ -3,20 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plant</title>
+    <title>Plan Website</title>
 
     <!-- favicon -->
-     <link rel="shortcut icon" href="img/plant.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/plant.svg" type="image/x-icon">
 
      <!-- link css -->
-      <link rel="stylesheet" href="../src/output.css">
+    <link rel="stylesheet" href="../src/output.css">
 
+    <!-- remix icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
-<body>
+<body class="bg-green-950 text-white font-jost tracking-wider">
 
+    <!-- header -->
+     <header id="navbar" class="bg-green-950 fixed w-full top-0 left-0 z-50">
+        <nav class="container flex items-center justify-between h-16 sm:h-20">
+            <div class="font-lobster sm:text-2xl">IndorePlants.</div>
+
+            <div id="nav-menu" class="absolute top-0 left-[-100%] min-h-[80vh] w-full bg-green-950/80 backdrop-blur-sm flex items-center justify-center duration-300 overflow-hidden lg:static lg:min-h-fit lg:bg-transparent lg:w-auto">
+                <ul class="flex flex-col items-center gap-8 lg:flex-row">
+                    <li>
+                        <a href="#home" class="nav-links">Home</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav-links">About</a>
+                    </li>
+                    <li>
+                        <a href="#popular" class="nav-links">Popular</a>
+                    </li>
+                    <li>
+                        <a href="#review" class="nav-links">Review</a>
+                    </li>
+                </ul>
+                <div class="absolute bottom-0 -right-10 opacity-90 lg:hidden">
+                    <img src="img/leaf-1.png" alt="leaf_image" class="w-32">
+                </div>
+                <div class="absolute -top-5 -left-5 rotate-90 opacity-90 lg:hidden">
+                    <img src="img/leaf-2.png" alt="leaf_image" class="w-32">
+                </div>
+            </div>
+            <div class="text-xl sm:text-3xl cursor-pointer z-50 lg:hidden">
+                <i class="ri-menu-4-line" id="hamburger"></i>
+            </div>
+        </nav>
+     </header>
+
+     <main>
+        <!-- Home -->
+         <section id="home" class="relative">
+            <div class="container">
+                <!-- blob 1 -->
+                 <div class="w-64 h-64 bg-green-700 rounded-full blur-3xl -z-10 opacity-40 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+                <!-- blob 2 -->
+                 <div class="w-64 h-64 bg-green-700 rounded-full blur-3xl -z-10 opacity-40 absolute right-0 bottom-0"></div>
+                <div class="flex flex-col items-center gap-5 lg:flex-row">
+                    <!-- content -->
+                    <div class="w-full space-y-5 lg:w-1/2">
+                        <h1>
+                            <span class="text-yellow-500">Plants</span> make a <br> positive
+                            <span class="text-yellow-500">impact</span> on <br> your environment
+                        </h1>
+
+                        <p class="text-slate-300 font-lobster">
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, inventore aperiam! Delectus fugiat architecto sapiente quo minus sit, dolorem in quia amet excepturi aliquam fugit.
+                        </p>
+
+                        <div class="flex flex-col gap-2 sm:flex-row md:gap-4 lg:pt-5 xl:pt-10">
+                            <button class="btn">
+                                <span>Shop Now</span>
+                                <i class="ri-leaf-line"></i>
+                            </button>
+                            <button class="btn btn_outline">
+                                <span>Know More</span>
+                                <i class="ri-leaf-line"></i>
+                            </button>
+                        </div>
+
+                        <p class="text-xs font-lobster text-slate-300">
+                            You will get 30-days free trial.
+                        </p>
+
+                        <div class="flex items-center gap-5  text-lg lg:pt-10">
+                            <i class="ri-facebook-fill text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer"></i>
+                            <i class="ri-twitter-x-line text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer text-base"></i>
+                            <i class="ri-instagram-line text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer"></i>
+                            <i class="ri-linkedin-fill text-slate-300 hover:text-yellow-500 duration-300 cursor-pointer"></i>
+                        </div>
+                    </div>
+
+                    <!-- image -->
+                     <div class="w-full relative lg:w-1/2">
+                        <img src="img/home.png" alt="home_image">
+
+                        <!-- leaf -->
+                         <div class="absolute -top-10 right-0 opacity-30 animate-movingY xl:top-5">
+                            <i class="ri-leaf-line text-yellow-500 text-5xl "></i>
+                         </div>
+                        <!-- flower -->
+                         <div class="absolute bottom-0 left-0 opacity-30 animate-rotate">
+                            <i class="ri-flower-line text-yellow-500 text-5xl"></i>
+                         </div>
+                        <!-- plant -->
+                         <div class="hidden absolute -top-8 -left-5 opacity-30 lg:block animate-scaleUp xl:top-0">
+                            <i class="ri-plant-line text-yellow-500 text-5xl"></i>
+                         </div>
+                     </div>
+                </div>
+            </div>
+         </section>
+     </main>
+
+    
    
-    
-    
+
+
+
+
+     <script src="index.js"></script>
+   
 </body>
 </html>

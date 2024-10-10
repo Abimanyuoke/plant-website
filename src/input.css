@@ -1,3 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lobster&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-links {
+    @apply text-lg font-bold duration-300;
+}
+
+.nav-links:hover {
+    @apply text-yellow-500;
+}
+
+section {
+    @apply py-20 md:py-20;
+}
+
+h1 {
+    @apply text-3xl md:text-4xl xl:text-5xl font-bold;
+}
+
+/* button */
+.btn {
+    @apply border border-yellow-500 bg-yellow-500 rounded-md px-5 py-2 duration-300;
+}
+
+.btn span {
+    @apply font-bold;
+}
+
+.btn:hover {
+    @apply opacity-90;
+}
+
+.btn_outline {
+    @apply bg-transparent;
+}
+
+.btn_outline:hover {
+    @apply bg-yellow-500;
+}
