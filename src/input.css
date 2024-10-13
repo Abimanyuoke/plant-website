@@ -52,3 +52,7 @@ h3 {
 .btn_outline:hover {
     @apply bg-yellow-500;
 }
+
+.swiper-pagination-bullet {
+    @apply bg-green-500 w-3 h-3;
+}
