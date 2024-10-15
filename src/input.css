@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    @apply overflow-x-hidden scroll-smooth;
+}
+
 .nav-links {
     @apply text-lg font-bold duration-300;
 }
