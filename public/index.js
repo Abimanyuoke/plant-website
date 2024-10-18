@@ -68,3 +68,49 @@ const swiper = new Swiper('.swiper', {
     },
   },
 });
+
+// scroll section
+
+const activeLink = () => {
+  const sections = document.querySelectorAll('section')
+  const navLinks = document.querySelectorAll(".nav-link")
+
+  let current = "home"
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+
+    if(this.scrollY >= sectionTop - 60) {
+      current = section.getAttribute("id")
+    }
+  })
+
+  navLinks.forEach(item => {
+    item.classList.remove("active")
+    if(item.href.includes(current)) {
+      item.classList.add("active")
+    }
+  })
+}
+
+window.addEventListener("sceoll", activeLink)
+
+// scroll reveal 
+const sr = ScrollReveal ({
+  origin: "top",
+  distance: "60px",
+  duration: 2500,
+  delay: 300,
+  reset: true
+})
+
+sr.reveal('.home_data, .about_top, .popular_top, .riview_top, .riview_swiper, .footer_icon, .footer_content, .copy_right')
+sr.reveal('.home_image', {delay: 500, scale: 0.5})
+
+sr.reveal('.service_card, .popular_card', {interval: 100})
+
+sr.reveal('.about_leaf', {delay: 1000, origin: "right"})
+sr.reveal('.about_item_1-content, .about_item_2-img', {origin: "right"})
+sr.reveal('.about_item_2-content, .about_item_1-img', {origin: "left"})
+
+sr.reveal('.riview_leaf, .footer_floral', {origin: "left"})
