@@ -19,7 +19,7 @@ navLink.forEach(link => {
 const scrollUp = () => {
   const scrollUpBtn = document.getElementById("scroll-up")
 
-  if(this.scrollY >= 205) {
+  if(this.scrollY >= 250) {
     scrollUpBtn.classList.remove("-bottom-1/2")
     scrollUpBtn.classList.add("bottom-4")
   } else {
@@ -28,18 +28,18 @@ const scrollUp = () => {
   }
 }
 
+window.addEventListener("scroll", scrollUp)
+
 // change background header
 const scrollHeader = () => {
   const header = document.getElementById("navbar")
 
-  if(this.scrollY >= 205) {
+  if(this.scrollY >= 50) {
    header.classList.add("border-b", "border-yellow-500")
   } else {
    header.classList.remove("border-b", "border-yellow-500")
   }
 }
-
-
 
 window.addEventListener("scroll", scrollHeader)
 
@@ -73,7 +73,7 @@ const swiper = new Swiper('.swiper', {
 
 const activeLink = () => {
   const sections = document.querySelectorAll('section')
-  const navLinks = document.querySelectorAll(".nav-link")
+  const navLinks = document.querySelectorAll(".nav-links")
 
   let current = "home"
 
@@ -93,7 +93,7 @@ const activeLink = () => {
   })
 }
 
-window.addEventListener("sceoll", activeLink)
+window.addEventListener("scroll", activeLink)
 
 // scroll reveal 
 const sr = ScrollReveal ({
